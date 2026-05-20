@@ -113,6 +113,7 @@
     <br><hr>
 
     <p id="owner"></p>
+    <p id="fruits"></p>
     <script>
         const details = {type:"Audi", model:"500", color: "red"}
         // to change a property of the array
@@ -123,6 +124,16 @@
 
         document.getElementById('owner'). innerHTML = 'The owner of the ' + details.color + ' car is ' + details.owner;
 
+        const fruits = ["apple", "banana", "orange"];
+
+        fruits[0] = "apple";
+
+        fruits.push("grape");
+
+        document.getElementById('fruits').innerHTML = fruits;
     </script>
+    <!-- this is an array and a object property -->
+
+    
 </body>
 </html>
