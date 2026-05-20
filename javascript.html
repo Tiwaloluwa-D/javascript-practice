@@ -110,5 +110,19 @@
     </script>
     <!-- this is an array and element was added to it using push -->
 
+    <br><hr>
+
+    <p id="owner"></p>
+    <script>
+        const details = {type:"Audi", model:"500", color: "red"}
+        // to change a property of the array
+        details.color = "blue";
+
+        // add a property to the array
+        details.owner = "James";
+
+        document.getElementById('owner'). innerHTML = 'The owner of the ' + details.color + ' car is ' + details.owner;
+
+    </script>
 </body>
 </html>
