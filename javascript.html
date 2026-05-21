@@ -205,6 +205,41 @@
 
     <br><hr>
 
-    
+    <p>Display "good day" if the current hour is less than 18:</p>
+    <p id="time">Good morning!</p>
+    <script>
+        if (new Date().getHours() < 18){
+            document.getElementById('time').innerHTML = "Good day!";
+        }
+    </script>
+
+    <p id="car"></p>
+    <script>
+        let age = 18;
+        let text = "you can't drive a car";
+
+        if (age >= 18){
+            text ="You can drive a car";
+        }
+        
+        document.getElementById('car').innerHTML = text;
+    </script>
+
+    <br><hr>
+
+    <p id="country"></p>
+    <script>
+        let country = "usa";
+        let countryAge = 18;
+        let word = "you are not old enough to drive "
+
+        if (country == "usa"){
+            if(countryAge >= 18){
+                word = "you are old enough to drive in the USA";
+            }
+        }
+
+        document.getElementById('country').innerHTML = word;
+    </script>
 </body>
 </html>
