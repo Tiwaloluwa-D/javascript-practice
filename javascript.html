@@ -145,6 +145,66 @@
         colorr.push("yellow");
 
         document.getElementById('testing').innerHTML = colorr.join(" , ");
+
+        let x = 10;
+        let y = 20;
+        let z = x + y;
+
+        document.getElementById('testing').innerHTML += "<br>The sum of x and y is: " + z;
+         // the '+=' operator is used to append the new content to the existing content of the element with id 'testing'. If we had used '=' instead, it would have replaced the existing content with the new content.
+        
+        let d = 5;
+        d++;
+        document.getElementById('testing').innerHTML += "<br>The value of e is: " + d++;
     </script>
+
+    <br><hr>
+
+    <input id="age" value="18">
+    <button onclick="election()">Try it</button>
+    <p id="vote"></p>
+
+    <script>
+        function election(){
+            
+            let votable;
+
+            let age = document.getElementById('age').value;
+
+        if (isNaN(age)) {
+                votable = "input is not a value";
+        }else{
+            votable = (age < 18) ? "To young" : "old enough" 
+        }
+
+        document.getElementById('vote').innerHTML = votable + " to vote. ";
+        }
+    </script>
+
+    <br><hr>
+
+    <input type="text" id="license" value="18">
+    <button onclick="checklicence()">Click to know if you are eligible</button>
+    <p id="feedback"></p>
+
+    <script>
+        function checklicence(){
+
+            let  eligible;
+            let eligibility = document.getElementById('license').value;
+
+            if (isNaN(eligibility)){
+                eligible = "input is not a value";
+            }else{
+                eligible = (eligibility < 18) ? 'Too young' : 'Eligible';
+            }
+            document.getElementById('feedback').innerHTML = eligible + " to get a driving license.";
+        }
+        // this is a ternary operator and it is used to check if the user is eligible to get a driving license or not. The 'isNaN' function is used to check if the input is a number or not. If the input is not a number, it will return "input is not a value". If the input is a number, it will check if the age is less than 18 or not. If the age is less than 18, it will return "Too young". If the age is 18 or more, it will return "Eligible".
+    </script>
+
+    <br><hr>
+
+    
 </body>
 </html>
